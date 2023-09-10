@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then(data => {
-                // Mostrar información del Pokémon
+               
                 nombrePokemonSpan.textContent = data.name;
                 idPokemonSpan.textContent = data.id;
                 tiposPokemonSpan.textContent = data.types.map(type => type.type.name).join(", ");
 
-                // Obtener la URL de la imagen del Pokémon
+               
                 const imagenUrl = data.sprites.front_default;
 
-                // Mostrar la imagen del Pokémon
+                
                 imagenPokemon.src = imagenUrl;
                 imagenPokemon.alt = `Imagen de ${data.name}`;
             })
