@@ -1,36 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", () => {
-    const pokemonInfo = document.getElementById("pokemon-info");
-    const pokemonInput = document.getElementById("pokemon-input");
-    const buscarButton = document.getElementById("buscar-button");
-
-    function obtenerInformacionPokemon(nombrePokemon) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${nombrePokemon.toLowerCase()}`;
-
-        fetch(url)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("No se pudo obtener la información del Pokémon.");
-                }
-                return response.json();
-            })
-            .then(data => {
-                pokemonInfo.innerHTML = `
-                    <p>Nombre del Pokémon: ${data.name}</p>
-                    <p>ID del Pokémon: ${data.id}</p>
-                    <p>Tipos: ${data.types.map(type => type.type.name).join(", ")}</p>
-                `;
-            })
-            .catch(error => {
-                console.error(error);
-                pokemonInfo.textContent = "Error al obtener la información del Pokémon.";
-            });
-    }
-
-    buscarButton.addEventListener("click", () => {
-        const nombrePokemon = pokemonInput.value;
-        obtenerInformacionPokemon(nombrePokemon);
-    });
-});*/
 document.addEventListener("DOMContentLoaded", () => {
     const pokemonInfo = document.getElementById("pokemon-info");
     const pokemonInput = document.getElementById("pokemon-input");
